@@ -181,9 +181,9 @@ def main():
             output["icmp_reply"] = stats.icmp_reply_list
 
     if options.indent <= 0:
-        print(json.dumps(output))
+        print(json.dumps(output), default=str)
     else:
-        print(json.dumps(output, indent=options.indent))
+        print(json.dumps(output, indent=options.indent), default=str)
 
     return 0
 
